@@ -25,7 +25,7 @@ class Server():
         return self.client.accept()
     
     def Send(self, data: str, connection: socket.socket):
-        return connection.send(data.encode())
+        return connection.send(str(data).encode())
 
     def Recv(self, buffer: int, connection: socket.socket):
         return connection.recv(buffer).decode()
@@ -40,7 +40,7 @@ class Client():
         self.connected_to = addr
     
     def Send(self, data: str):
-        return self.client.send(data.encode())
+        return self.client.send(str(data).encode())
     
     def Recv(self, buffer: int):
         return self.client.recv(buffer).decode()
