@@ -11,12 +11,12 @@
  4. to import in your project, use `import network`
 
 ## documentation
- start by importing `network` into your project `import network`
- there are 2 classes inside `network.network`, which are
- - `network.network.Server()` for servers
- - `network.network.Client()` for clients
+ start by importing `network` into your project by using `import network`
+ there are 2 classes, which are
+ - `network.Server()` for servers
+ - `network.Client()` for clients
 
-  ### `network.network.Server()`
+  ### `network.Server()`
 
   when instantiated, creates a new AF_INET socket
 
@@ -49,10 +49,10 @@
   
   returns
   - received data as a `str`
-  ### `network.network.Client`
+  ### `network.Client`
   class to be used as client.
   #### `Client.Connect(addr)`
-  connects to a server. `addr` has to be a tuple of the ipv4 address and port. for example `('127.0.0.1', 6969)`. this has to be a valid `network.network.Server()` server
+  connects to a server. `addr` has to be a tuple of the ipv4 address and port. for example `('127.0.0.1', 6969)`. this has to be a valid `network.Server()` server
   #### `Client.Send(data)`
   sends a string, encoded as utf-8, to the currenly connected server. returns the amount of bytes sent
   #### `Client.Recv(buffer)`
