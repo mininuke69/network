@@ -49,3 +49,11 @@
   
   returns
   - received data as a `str`
+  ### `network.network.Client`
+  class to be used as client.
+  #### `Client.Connect(addr)`
+  connects to a server. `addr` has to be a tuple of the ipv4 address and port. for example `('127.0.0.1', 6969)`. this has to be a valid `network.network.Server()` server
+  #### `Client.Send(data)`
+  sends a string, encoded as utf-8, to the currenly connected server. returns the amount of bytes sent
+  #### `Client.Recv(buffer)`
+  waits untill there is data to receive, then receives and returns the data. <br>`buffer` is the max length of the received data. if it is any longer, the data gets cut off there. returns the received data as a string.
